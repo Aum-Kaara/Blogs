@@ -4,6 +4,15 @@ Microsoft Azure Cloud offers several types of scalable, high-availability storag
 
 ![N|Solid](Image.png)
 
+# Redundancy
+
+| Type | Description |
+| ------ | ------ |
+| Locally redundant storage (LRS) | Keeps multiple copies of your data in one data center. |
+| Zone redundant storage (ZRS) | Keeps multiple copies of your data in different data centers in different regions. |
+| Geo-redundant storage (GRS)	 | Holds multiple copies of your data in one region and replicates the data to the second region, asynchronously. |
+| Read-access geo-redundant storage (RA-GRS) | Allows read access from the second region, which is used for GRS, and the read availability is 99.99% |
+
 # Types
 - Blob Storage  
 - Table Storage
