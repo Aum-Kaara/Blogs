@@ -17,6 +17,9 @@ Microsoft Azure Cloud offers several types of scalable, high-availability storag
 |Geo-zone-redundant storage (GZRS)|Copies your data synchronously across three Azure availability zones in the primary region using ZRS|
 |Read Access Geo-zone-redundant storage(RA-GZRS)|Exposes a read endpoint on this secondary replica allowing you to read data in the event of primary region unavailability|
 
+# Account Type
+- Hot- The Hot access tier. This tier is optimized for frequent access of objects in the storage account. Accessing data in the hot tier is most cost-effective, while storage costs are higher. New storage accounts are created in the hot tier by default.
+- Cool -The Cool access tier. This tier is optimized for storing large amounts of data that is infrequently accessed and stored for at least 30 days. Storing data in the cool tier is more cost-effective, but accessing that data may be more expensive than accessing data in the hot tier.
 
 # Types
 - Blob Storage  
