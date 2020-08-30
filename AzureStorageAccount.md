@@ -14,6 +14,12 @@ Microsoft Azure Cloud offers several types of scalable, high-availability storag
 ‘Blob’ stands for Binary Large Object and includes text files, images, audios, and videos. Azure Blob is a service that stores massive unstructured data that can be accessed from any place via protocols like HTTP or HTTPS.
 >This is the most basic and the cheapest way to store your files in Azure.
 
+There are three types of blobs
+
+- *Block Blobs* - When you store a file in block blob - that means that it arrives on the storage in small parts and only after you complete the upload - the file/blob puts itself together in one piece. With that architecture, file cannot be modified without a complete re-upload. This is the most basic and the cheapest way to store your files in Azure.
+- Append Blobs-You cannot change the Block Blob without re-uploading it. However, there are situations, when you need to update the file on a regular basis. Append Blobs were created just for that purpose - they are structured in such a way, so the user can upload parts of the files from the end.
+- Page Blobs - Page Blobs are the basis for Microsoft Azure virtual machines environment. They were specifically designed to meet the restrictions for disks - each Page Blob should be multiple to 512 bytes. The architecture of Page Blobs allows writing data to each part of the blob.
+
 ##### Queue Storage
 
 Queue Storage is a type of storage designed to connect components of your application. It allows you to build flexible applications with decoupled and independent components that rely on asynchronous message queuing.
