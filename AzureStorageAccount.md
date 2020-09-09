@@ -2,11 +2,11 @@
 
 Microsoft Azure Cloud offers several types of scalable, high-availability storage: for tables, queues, files, blobs, and Azure virtual machine disks
 
-![N|Solid](Image.png)
+![N|Solid](Images/Image.png)
 
 # Redundancy
 
-![N|Solid](Replication.png)
+![N|Solid](Images/Replication.png)
 
 | Type | Description |
 | ------ | ------ |
