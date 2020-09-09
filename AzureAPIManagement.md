@@ -1,50 +1,193 @@
-# Azure Storage Account
+# Azure API Management
 
-Microsoft Azure Cloud offers several types of scalable, high-availability storage: for tables, queues, files, blobs, and Azure virtual machine disks
+API Management is a Azure service for abstracting your back-end services(Web App, Logic and Function App) and presenting a set of API’s via a single HTTPs endpoint.
 
-![N|Solid](Images/Image.png)
+API Management offers 3 types of Services
+  - Developer Portal
+  - API Gateway
+  - Publisher Portal
 
-# Redundancy
+# Features
 
-![N|Solid](Images/Replication.png)
+  - API Documentation
+  - Monitoring
+  - API Versioning
+  - API Security
+  - API Policy
+  - User Roles
+  - Mock API Response
 
-| Type | Description |
+# Pricing
+
+![N|Solid](Images/APIM-Pricing.png)
+
+
+# How To Create API Management Instance
+
+```sh
+Home > API Management services > Create API Management services
+```
+
+You can also:
+  - Import and save files from GitHub, Dropbox, Google Drive and One Drive
+  - Drag and drop markdown and HTML files into Dillinger
+  - Export documents as Markdown, HTML and PDF
+
+Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site][df1]
+
+> The overriding design goal for Markdown's
+> formatting syntax is to make it as readable
+> as possible. The idea is that a
+> Markdown-formatted document should be
+> publishable as-is, as plain text, without
+> looking like it's been marked up with tags
+> or formatting instructions.
+
+This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
+
+### Tech
+
+Dillinger uses a number of open source projects to work properly:
+
+* [AngularJS] - HTML enhanced for web apps!
+* [Ace Editor] - awesome web-based text editor
+* [markdown-it] - Markdown parser done right. Fast and easy to extend.
+* [Twitter Bootstrap] - great UI boilerplate for modern web apps
+* [node.js] - evented I/O for the backend
+* [Express] - fast node.js network app framework [@tjholowaychuk]
+* [Gulp] - the streaming build system
+* [Breakdance](https://breakdance.github.io/breakdance/) - HTML to Markdown converter
+* [jQuery] - duh
+
+And of course Dillinger itself is open source with a [public repository][dill]
+ on GitHub.
+
+### Installation
+
+Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+$ cd dillinger
+$ npm install -d
+$ node app
+```
+
+For production environments...
+
+```sh
+$ npm install --production
+$ NODE_ENV=production node app
+```
+
+### Plugins
+
+Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
+
+| Plugin | README |
 | ------ | ------ |
-| Locally redundant storage (LRS) | Keeps multiple copies of your data in one data center. |
-| Zone redundant storage (ZRS) | Keeps multiple copies of your data in different data centers in different regions. |
-| Geo-redundant storage (GRS)	 | Holds multiple copies of your data in one region and replicates the data to the second region, asynchronously. |
-| Read-access geo-redundant storage (RA-GRS) | Allows read access from the second region, which is used for GRS, and the read availability is 99.99% |
-|Geo-zone-redundant storage (GZRS)|Copies your data synchronously across three Azure availability zones in the primary region using ZRS|
-|Read Access Geo-zone-redundant storage(RA-GZRS)|Exposes a read endpoint on this secondary replica allowing you to read data in the event of primary region unavailability|
+| Dropbox | [plugins/dropbox/README.md][PlDb] |
+| GitHub | [plugins/github/README.md][PlGh] |
+| Google Drive | [plugins/googledrive/README.md][PlGd] |
+| OneDrive | [plugins/onedrive/README.md][PlOd] |
+| Medium | [plugins/medium/README.md][PlMe] |
+| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
 
-# Account Type
-- Hot- The Hot access tier. This tier is optimized for frequent access of objects in the storage account. Accessing data in the hot tier is most cost-effective, while storage costs are higher. New storage accounts are created in the hot tier by default.
-- Cool -The Cool access tier. This tier is optimized for storing large amounts of data that is infrequently accessed and stored for at least 30 days. Storing data in the cool tier is more cost-effective, but accessing that data may be more expensive than accessing data in the hot tier.
 
-# Types
-- Blob Storage  
-- Table Storage
-- Queue Storage
-- Disk Storage
+### Development
 
-##### Blob Storage
-‘Blob’ stands for Binary Large Object and includes text files, images, audios, and videos. Azure Blob is a service that stores massive unstructured data that can be accessed from any place via protocols like HTTP or HTTPS.
->This is the most basic and the cheapest way to store your files in Azure.
+Want to contribute? Great!
 
-There are three types of blobs
+Dillinger uses Gulp + Webpack for fast developing.
+Make a change in your file and instantaneously see your updates!
 
-- *Block Blobs* - When you store a file in block blob - that means that it arrives on the storage in small parts and only after you complete the upload - the file/blob puts itself together in one piece. With that architecture, file cannot be modified without a complete re-upload. This is the most basic and the cheapest way to store your files in Azure.
-- Append Blobs-You cannot change the Block Blob without re-uploading it. However, there are situations, when you need to update the file on a regular basis. Append Blobs were created just for that purpose - they are structured in such a way, so the user can upload parts of the files from the end.
-- Page Blobs - Page Blobs are the basis for Microsoft Azure virtual machines environment. They were specifically designed to meet the restrictions for disks - each Page Blob should be multiple to 512 bytes. The architecture of Page Blobs allows writing data to each part of the blob.
+Open your favorite Terminal and run these commands.
 
-##### Queue Storage
+First Tab:
+```sh
+$ node app
+```
 
-Queue Storage is a type of storage designed to connect components of your application. It allows you to build flexible applications with decoupled and independent components that rely on asynchronous message queuing.
+Second Tab:
+```sh
+$ gulp watch
+```
 
-##### Table Storage
-Table storage can store, you guessed it, tables. Microsoft Azure Table Storage was designed to store structured NoSQL data. The storage is hugely scalable and, at the same time, cheap to keep data in. 
-It is schemaless, i.e., the data does not have a fixed structure. You can easily store datasets that do not require any joins or foreign keys. You can denormalize them to make quicker access. You can scale up the tables based on your requirements.
+(optional) Third:
+```sh
+$ karma test
+```
+#### Building for source
+For production release:
+```sh
+$ gulp build --prod
+```
+Generating pre-built zip archives for distribution:
+```sh
+$ gulp build dist --prod
+```
+### Docker
+Dillinger is very easy to install and deploy in a Docker container.
 
-##### Disk Storage
-Microsoft Azure Disk Storage works on the basis of Page Blobs. It is a service that allows you to create disks for your virtual machines. The disk, created in Disk Storage, can be accessed from only one virtual machine. In other words - it is your local drive.
-They are accessible via SMB.
+By default, the Docker will expose port 8080, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.
+
+```sh
+cd dillinger
+docker build -t joemccann/dillinger:${package.json.version} .
+```
+This will create the dillinger image and pull in the necessary dependencies. Be sure to swap out `${package.json.version}` with the actual version of Dillinger.
+
+Once done, run the Docker image and map the port to whatever you wish on your host. In this example, we simply map port 8000 of the host to port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
+
+```sh
+docker run -d -p 8000:8080 --restart="always" <youruser>/dillinger:${package.json.version}
+```
+
+Verify the deployment by navigating to your server address in your preferred browser.
+
+```sh
+127.0.0.1:8000
+```
+
+#### Kubernetes + Google Cloud
+
+See [KUBERNETES.md](https://github.com/joemccann/dillinger/blob/master/KUBERNETES.md)
+
+
+### Todos
+
+ - Write MORE Tests
+ - Add Night Mode
+
+License
+----
+
+MIT
+
+
+**Free Software, Hell Yeah!**
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+
+   [dill]: <https://github.com/joemccann/dillinger>
+   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
+   [john gruber]: <http://daringfireball.net>
+   [df1]: <http://daringfireball.net/projects/markdown/>
+   [markdown-it]: <https://github.com/markdown-it/markdown-it>
+   [Ace Editor]: <http://ace.ajax.org>
+   [node.js]: <http://nodejs.org>
+   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
+   [jQuery]: <http://jquery.com>
+   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
+   [express]: <http://expressjs.com>
+   [AngularJS]: <http://angularjs.org>
+   [Gulp]: <http://gulpjs.com>
+
+   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
+   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
+   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
+   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
+   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
+   [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
