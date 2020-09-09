@@ -30,3 +30,43 @@ Home > API Management services > Create API Management services
 
 ![](Images/Create-APIM.png)
 
+# How to Deploy API Management using ARM Template
+
+```sh
+Home > API Management services > APIM Instance > Export Template
+```
+
+```sh
+{
+   "$schema":"https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+   "contentVersion":"1.0.0.0",
+   "parameters":{
+      "apimcapacity":{
+         "type":"int",
+         "defaultValue":0
+      },
+      "apimname":{
+         "type":"string",
+         "defaultValue":"apim-my-works"
+      }
+   },
+   "variables":{ },
+   "resources":[
+      {
+         "type":"Microsoft.ApiManagement/service",
+         "apiVersion":"2019-01-01",
+         "name":"[parameters('apimname')]",
+         "location":"[resourceGroup().location]",
+         "sku":{
+            "name":"Consumption",
+            "capacity":"[parameters('apimcapacity')]"
+         },
+         "properties":{
+            "publisherEmail":"mohit_gupta_akgec@hotmail.com",
+            "publisherName":"JK-Tech"
+         }
+      }
+   ],
+   "outputs":{}
+}
+```
