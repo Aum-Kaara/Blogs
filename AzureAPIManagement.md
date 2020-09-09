@@ -30,6 +30,20 @@ Home > API Management services > Create API Management services
 
 ![](Images/Create-APIM.png)
 
+# How to Import Existing Swagger API 
+
+Create API in API Management using Existing  OpenAPI Specification as Backend API
+
+For Example , I have existing API with swagger hosted at [Uri](https://conferenceapi.azurewebsites.net/?format=json)
+
+```sh
+Home > API Management services > APIM Instance > Export Template
+```
+![](Images/Create-API-OpenAPI.png)
+
+![](Images/Create-API-OpenAPI-Step2.png)
+
+
 # How to Deploy API Management using ARM Template
 
 ```sh
