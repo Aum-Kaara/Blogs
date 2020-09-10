@@ -43,6 +43,23 @@ Home > API Management services > APIM Instance > Export Template
 
 ![](Images/Create-API-OpenAPI-Step2.png)
 
+# How to Mock API Response
+
+Mock API Response is required when the API façade is designed first and the backend implementation comes later. Or, the backend is being developed in parallel.
+
+### Create Blank API
+
+![](Images/Mock-Response-1.png)
+
+![](Images/Mock-Response-2.png)
+
+### Create Mock Operation
+
+![](Images/Mock-Response-3.png)
+
+### Add Mock Policy 
+
+![](Images/Mock-Response-4.png)
 
 # How to Deploy API Management using ARM Template
 
@@ -77,7 +94,7 @@ Home > API Management services > APIM Instance > Export Template
          },
          "properties":{
             "publisherEmail":"mohit_gupta_akgec@hotmail.com",
-            "publisherName":"JK-Tech"
+            "publisherName":"my-works"
          }
       }
    ],
