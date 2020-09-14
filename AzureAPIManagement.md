@@ -80,13 +80,14 @@ Expose API Scope
 ```sh
 Azure Active Directory > Conference API  > Expose An API
 ```
-![Expose API](Images/OAuth-Step2.png)
+![Expose API](Images/OAuth-Step7.png)
 
 Create O-Auth Scope for API 
 
 ```sh
 Azure Active Directory > Conference API  > Manifest
 ```
+![Expose API](Images/OAuth-Step3.png)
 
 Edit Manifest file 
 
@@ -113,16 +114,20 @@ Create Application for Conference API Client
 Azure Active Directory > App Registration > New Registration
 ```
 
+![](Images/OAuth-Step2.png)
+
 Give permission to This application to access scope of Conference API application
 
 ```sh
 Azure Active Directory > Conference API Client  > API Permission
 ```
+![](Images/OAuth-Step4.png)
 
 Add Secret to Client application
 ```sh
 Azure Active Directory > Conference API Client  > Certificates & secrets
 ```
+![](Images/OAuth-Step5.png)
 
 Add Validate JWT Policy at API Operations
 
@@ -137,10 +142,15 @@ Add Validate JWT Policy at API Operations
     </required-claims>
 </validate-jwt>
 ```
+![](Images/OAuth-Step6.png)
 
 ### Fetch Access Token
 
+![Fetch Access Token](Images/OAuth-Step8.png)
+
 ### Call API using Bearer Token in Authorization Header
+
+![](Images/OAuth-Step9.png)
 
 # How to Deploy API Management using ARM Template
 
