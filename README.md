@@ -2,4 +2,4 @@
 
 | Introduction  | README |
 | ------ | ------ |
-| Azure API Management | [AzureAPIManagement.md](AzureAPIManagement) |
+| Azure API Management | [AzureAPIManagement.md](AzureAPIManagement.md) |
