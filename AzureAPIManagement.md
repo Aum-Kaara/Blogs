@@ -106,7 +106,7 @@ Edit Manifest file
 		}
 ```
 
-![Edit Manifest file](Images/OAuth-Step3.png)
+
 
 Create Application for Conference API Client
 
