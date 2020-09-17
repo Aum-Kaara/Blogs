@@ -40,7 +40,7 @@ Policy defination is set of logical expression (What to evaluate and what action
 
 ### How to create custom Azure Policy
 
-In This Example , We will create a policy to allow  the use of Disk size with 4 GB , 8 GB , 16 GB , 32 GB , 64 GB
+In This Example , We will create a policy to allow  the use of Disk size with 4 GB , 8 GB only
 
 ```sh
 Home > Policy > Policy Defination
