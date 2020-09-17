@@ -2,6 +2,8 @@
 
 Azure Policy is the set of rules we can enforce over azure resources .
 
+It is a free Azure service that you can assign  to resources, and receive alerts or take action in cases of non-compliance with these policies. 
+
 > An Organisation need to make sure all their Azure resources are deployed under west us region.
 
 > Restrict disk size between 4 - 64 GB to prevent cost 
