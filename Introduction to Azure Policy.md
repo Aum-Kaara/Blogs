@@ -69,11 +69,16 @@ Home > Policy > Policy Defination
   }
 }
 ```
+
+![](Images/Policy-Step1.png)
 ### How to assign on azure resource group or Azure Subscription
 
 ```sh
 Home > Policy > Assign Policy
 ```
+![](Images/Policy-Step2.png)
+
+![](Images/Policy-Step3.png)
 
 ### How to test 
 
