@@ -97,4 +97,8 @@ Create disk of size 1024 GB . It will raise error while deploying
 
 ![](Images/Policy-Step6.png)
 
+### How it is different from RBAC 
 
+Role-based Access Control is about limiting which users can do what. 
+Azure Policy is about limiting what actions can and cannot be taken.
+It doesn’t really care about what kind of user you are; if the Policy says you can’t open a certain port to the world, then you can’t. 
