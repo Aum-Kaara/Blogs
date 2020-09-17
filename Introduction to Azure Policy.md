@@ -71,17 +71,28 @@ Home > Policy > Policy Defination
 ```
 
 ![](Images/Policy-Step1.png)
+
+![](Images/Policy-Step2.png)
+
+![](Images/Policy-Step3.png)
+
 ### How to assign on azure resource group or Azure Subscription
 
 ```sh
 Home > Policy > Assign Policy
 ```
-![](Images/Policy-Step2.png)
 
-![](Images/Policy-Step3.png)
+![](Images/Policy-Step4.png)
+
+Assign parameter 
+
+![](Images/Policy-Step5.png)
+
 
 ### How to test 
 
 Create disk of size 1024 GB . It will raise error while deploying 
+
+![](Images/Policy-Step6.png)
 
 
