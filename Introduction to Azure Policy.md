@@ -38,6 +38,36 @@ Policy defination is set of logical expression (What to evaluate and what action
       }
 ```
 
+##### logical operators supported 
+
+         * not
+         * allOf
+         * anyOf
+
+##### Condition type supported
+
+         * equals
+         * notEquals
+         * like
+         * notLike
+         * match
+         * notMatch
+         * contains
+         * notContains
+         * in
+         * notIn
+         * containsKey
+         * notContainsKey
+         * exists
+
+##### Effects type supported
+
+         * Deny
+         * Audit
+         * Append 
+         * AuditIfNotExists 
+         * DeployIfNotExists 
+
 ### How to create custom Azure Policy
 
 In This Example , We will create a policy to allow  the use of Disk size with 4 GB , 8 GB only
