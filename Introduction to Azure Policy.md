@@ -67,3 +67,14 @@ Home > Policy > Policy Defination
   }
 }
 ```
+### How to assign on azure resource group or Azure Subscription
+
+```sh
+Home > Policy > Assign Policy
+```
+
+### How to test 
+
+Create disk of size 1024 GB . It will raise error while deploying 
+
+
