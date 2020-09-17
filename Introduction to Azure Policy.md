@@ -2,7 +2,9 @@
 
 Azure Policy is the set of rules we can enforce over azure resources .
 
-> an Organisation need to make sure all their Azure resources are deployed under west us region.
+> An Organisation need to make sure all their Azure resources are deployed under west us region.
+> Restrict disk size between 4 - 64 GB to prevent cost 
+> Restrict developer to create Virtual Machine with sku's B1s , B1ls
 
 It can prevent the creation of disallowed resources, ensure new resources have specific settings applied .
 
